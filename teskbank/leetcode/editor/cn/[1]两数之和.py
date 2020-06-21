@@ -25,3 +25,5 @@ class Solution:
             hashmap[num] = index
         print('Cannot find the two numbers')
 # leetcode submit region end(Prohibit modification and deletion)
+
+

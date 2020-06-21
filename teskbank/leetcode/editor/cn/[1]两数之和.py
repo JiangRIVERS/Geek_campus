@@ -17,5 +17,11 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        print('test')
+        hashmap = {}
+        for index, num in enumerate(nums):
+            residual = target - num
+            if residual in hashmap:
+                return [hashmap.get(residual), index]
+            hashmap[num] = index
+        print('Cannot find the two numbers')
 # leetcode submit region end(Prohibit modification and deletion)

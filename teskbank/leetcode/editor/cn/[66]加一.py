@@ -28,15 +28,12 @@ class Solution:
         2. 转换为字符串；
         """
         size = len(digits)
-        for i in range(size - 1):
+        for i in range(size):
             digits[size -1 - i] += 1
-            if digits[size - 1 - i] < 10:
+            if digits[size - 1 - i] < 10:                                                              
                 return digits
-            digits[size - 1 - i] = digits[size -1 -i] % 10
-        if digits[0] != 9:
-            digits[0] +=1
-            return digits
-        digits = [1, 0] + [i for i in digits[1:]]
+            digits[size - 1 - i] = 0
+        digits = [1] + [i for i in digits]
         return digits
 
 

@@ -23,4 +23,23 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
+        """
+        1. 数组
+        2. 转换为字符串；
+        """
+        size = len(digits)
+        for i in range(size - 1):
+            digits[size -1 - i] += 1
+            if digits[size - 1 - i] < 10:
+                return digits
+            digits[size - 1 - i] = digits[size -1 -i] % 10
+        if digits[0] != 9:
+            digits[0] +=1
+            return digits
+        digits = [1, 0] + [i for i in digits[1:]]
+        return digits
+
+
+
+
 # leetcode submit region end(Prohibit modification and deletion)

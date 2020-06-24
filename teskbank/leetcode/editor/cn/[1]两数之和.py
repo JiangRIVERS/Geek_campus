@@ -18,12 +18,11 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashmap = {}
-        for index, num in enumerate(nums):
-            residual = target - num
-            if residual in hashmap:
-                return [hashmap.get(residual), index]
-            hashmap[num] = index
-        print('Cannot find the two numbers')
+        for idx, num in enumerate(nums):
+            if num not in hashmap:
+                hashmap[target - num] = idx
+            else:
+                return [hashmap[num], idx]
 # leetcode submit region end(Prohibit modification and deletion)
 
 

@@ -40,13 +40,10 @@ class Solution:
         for i in range(1, n+1):
             str_ = ""
             for key in hashmap:
-                if not i % key:f
+                if not i % key:
                     str_ += hashmap[key]
             if not str_ :
                 str_ = str(i)
             res.append(str_)
-        return res
-
-
         return res
 # leetcode submit region end(Prohibit modification and deletion)

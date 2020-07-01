@@ -24,6 +24,7 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         s_key = tuple(sorted(s))
         t_key = tuple(sorted(t))
+
         if s_key == t_key:
             return True
         return False

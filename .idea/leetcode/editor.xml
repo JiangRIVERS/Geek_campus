@@ -67,6 +67,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[239]滑动窗口最大值.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[239]滑动窗口最大值.py" />
+              <option name="questionId" value="239" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[242]有效的字母异位词.py">
           <value>
             <LeetcodeEditor>
@@ -107,6 +115,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[31]下一个排列.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[31]下一个排列.py" />
+              <option name="questionId" value="31" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[347]前 K 个高频元素.py">
           <value>
             <LeetcodeEditor>
@@ -144,6 +160,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[4]寻找两个正序数组的中位数.py" />
               <option name="questionId" value="4" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[589]N叉树的前序遍历.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[589]N叉树的前序遍历.py" />
+              <option name="questionId" value="775" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[590]N叉树的后序遍历.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[590]N叉树的后序遍历.py" />
+              <option name="questionId" value="776" />
             </LeetcodeEditor>
           </value>
         </entry>

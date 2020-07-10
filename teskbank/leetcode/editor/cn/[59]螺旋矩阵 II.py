@@ -15,4 +15,26 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
+        res = [[0 for i in range(n)] for j in range(n)]
+        l, r , t, b = 0, n-1, 0, n-1 # 设定边界值
+        num, end = 1, n**2
+        while num <= end:
+            for i in range(l, r + 1):
+                res[t][i] = num
+                num += 1
+            t +=1
+            for i in range(t, b + 1):
+                res[i][r] = num
+                num += 1
+            r -= 1
+            for i in range(r, l - 1, -1):
+                res[b][i] = num
+                num += 1
+            b -= 1
+            for i in range(b, t - 1, -1):
+                res[i][l] = num
+                num += 1
+            l += 1
+        return res
+
 # leetcode submit region end(Prohibit modification and deletion)

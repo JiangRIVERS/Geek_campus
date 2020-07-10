@@ -27,5 +27,11 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        
+        nums1_hashmap = collections.Counter(nums1)
+        nums2_hashmap = collections.Counter(nums2)
+        res = []
+        for i in nums1_hashmap:
+            if i in nums2_hashmap:
+                res.append(i)
+        return res
 # leetcode submit region end(Prohibit modification and deletion)

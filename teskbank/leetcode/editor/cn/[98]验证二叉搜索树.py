@@ -42,4 +42,20 @@
 
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
+        min_ = float('-inf')
+        def helper(root):
+            nonlocal min_
+            if not root:
+                return True
+            if not helper(root.left):
+                return False
+            if root.val <= min_:
+                return False
+            min_ = root.val
+            if not helper(root.right):
+                return False
+            return True
+        return helper(root)
+
+
 # leetcode submit region end(Prohibit modification and deletion)

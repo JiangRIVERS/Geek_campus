@@ -24,6 +24,4 @@ class Solution:
         for i in range(len(nums)):
             heapq.heappush(heap, nums[i])
         return heapq.nlargest(k, heap)[-1]
-
-
 # leetcode submit region end(Prohibit modification and deletion)

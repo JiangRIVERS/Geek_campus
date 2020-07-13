@@ -19,4 +19,15 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
+        res = []
+        def helper(l, r, s):
+            if l > n or r > l:
+                return
+            if l == n and r == n:
+                res.append(s)
+            helper(l + 1, r, s +'(')
+            helper(l, r + 1, s + ')')
+        helper(0, 0 , '')
+        return res
+
 # leetcode submit region end(Prohibit modification and deletion)

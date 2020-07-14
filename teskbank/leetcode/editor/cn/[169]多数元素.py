@@ -21,6 +21,7 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         hashmap = collections.Counter(nums)
-        dict_ = {values:keys for keys, values in hashmap.items()}
-        return dict_[heapq.nlargest(1, dict_)[0]]
+        return heapq.nlargest(1, hashmap, key=hashmap.get)[0]
+
+
 # leetcode submit region end(Prohibit modification and deletion)

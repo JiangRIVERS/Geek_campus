@@ -20,8 +20,22 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
+        '''
         hashmap = collections.Counter(nums)
         return heapq.nlargest(1, hashmap, key=hashmap.get)[0]
-
+        '''
+        def helper(l, r):
+            if l == r:
+                return nums[l]
+            mid = (l + r) // 2
+            left_value = helper(l, mid)
+            right_value = helper(mid + 1, r)
+            if left_value == right_value:
+                return left_value
+            else:
+                left = sum(1 for i in range(l, r+1) if nums[i]==left_value)
+                right = sum(1 for i in range(l, r+1) if nums[i]==right_value)
+                return left_value if left > right else right_value
+        return helper(0, len(nums)-1)
 
 # leetcode submit region end(Prohibit modification and deletion)

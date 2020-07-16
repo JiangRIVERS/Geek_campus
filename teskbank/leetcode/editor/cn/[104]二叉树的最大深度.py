@@ -29,13 +29,5 @@ class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
-        self.max_ = 1
-        def helper(root, level):
-            if not root:
-                self.max_ = max(self.max_, level)
-                return
-            helper(root.left, level+1)
-            helper(root.right, level+1)
-        helper(root, 0)
-        return self.max_
+        return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
 # leetcode submit region end(Prohibit modification and deletion)

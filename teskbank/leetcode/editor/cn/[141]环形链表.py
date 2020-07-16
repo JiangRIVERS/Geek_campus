@@ -48,5 +48,12 @@
 
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
-        
+        pre = {}
+        while head:
+            if head.next not in pre:
+                head = head.next
+                pre[head] = 1
+            else:
+                return True
+        return False
 # leetcode submit region end(Prohibit modification and deletion)

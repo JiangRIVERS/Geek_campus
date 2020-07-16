@@ -115,6 +115,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[226]翻转二叉树.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[226]翻转二叉树.py" />
+              <option name="questionId" value="226" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[22]括号生成.py">
           <value>
             <LeetcodeEditor>
@@ -240,6 +248,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[50]Pow(x, n).py" />
               <option name="questionId" value="50" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[51]N皇后.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[51]N皇后.py" />
+              <option name="questionId" value="51" />
             </LeetcodeEditor>
           </value>
         </entry>

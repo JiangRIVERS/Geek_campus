@@ -71,7 +71,6 @@ class Solution:
             for i in range(len(current)):
                 for j in range(3):
                     current_end = current[:i] + dict_[current[i]][j] + current[i+1:]
-
                     if current_end not in current_bank:
                         continue
                     current_bank.remove(current_end)

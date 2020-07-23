@@ -64,7 +64,8 @@ class Solution:
                 }
         def helper(current, step, current_bank):
             if current == end:
-                self.count = step
+                if step < self.count:
+                    self.count = step
                 return
             if not current_bank:
                 return
@@ -74,7 +75,7 @@ class Solution:
                     if current_end not in current_bank:
                         continue
                     current_bank.remove(current_end)
-                    helper(current_end, step+1, current_bank)
+                    helper(current_end, step+1, current_bank.copy())
         helper(start, 0, bank)
         return self.count if self.count <= size else -1
         

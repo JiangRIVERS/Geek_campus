@@ -47,30 +47,24 @@ class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         if endWord not in wordList or not endWord or not beginWord or not wordList:
             return 0
-
-        list_ = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-                 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-        size = len(wordList)
-        self.step = float('inf')
-        def helper(cur, curwordlist, step):
-            if cur == endWord:
-                if step < self.step:
-                    self.step = step
-                return
-            elif not curwordlist:
-                return
-
-            for i in range(len(cur)):
-                idx = list_.index(cur[i])
-                for j in (list_[:idx] + list_[idx+1:]):
-                    cur_end = cur[:i] + j + cur[i+1:]
-                    if cur_end not in curwordlist:
-                        continue
-                    curwordlist.remove(cur_end)
-                    helper(cur_end, curwordlist.copy(), step+1)
-        helper(beginWord, wordList, 0)
-        return self.step + 1 if self.step <= size else 0
-
-
+        size = len(beginWord)
+        all_combo_dict = collections.defaultdict(list)
+        for word in wordList:
+            for i in range(size):
+                all_combo_dict[word[:i] + '*' + word[i + 1:]].append(word)
+        queue = [(beginWord, 1)]
+        visited = {beginWord: 1}
+        while queue:
+            cur, cur_level = queue.pop(0)
+            for i in range(size):
+                key = cur[:i] + '*' + cur[i+1:]
+                for j in all_combo_dict[key]:
+                    if j == endWord:
+                        return cur_level + 1
+                    if j not in visited:
+                        visited[j] = 1
+                        queue.append((j, cur_level+1))
+                all_combo_dict[key] = []
+        return 0
         
 # leetcode submit region end(Prohibit modification and deletion)

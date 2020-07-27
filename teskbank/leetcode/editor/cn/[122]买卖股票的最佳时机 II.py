@@ -48,6 +48,4 @@ class Solution:
             if prices[i+1] > prices[i]:
                 earn += prices[i+1] - prices[i]
         return earn
-
-
 # leetcode submit region end(Prohibit modification and deletion)

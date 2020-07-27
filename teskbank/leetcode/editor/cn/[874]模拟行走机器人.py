@@ -47,5 +47,22 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
-        
+        dx = [0, 1, 0, -1]
+        dy = [1, 0, -1, 0]
+        x, y, di = 0, 0, 0
+        max_ = 0
+        obstacles = set(map(tuple, obstacles))
+        for cmd in commands:
+            if cmd == -1:
+                di = (di + 1) % 4
+            elif cmd == -2:
+                di = (di - 1) % 4
+            else:
+                for step in range(cmd):
+                    cur = (x + dx[di], y + dy[di])
+                    if cur not in obstacles:
+                        x += dx[di]
+                        y += dy[di]
+                        max_ = max(max_, x ** 2 + y ** 2)
+        return max_
 # leetcode submit region end(Prohibit modification and deletion)

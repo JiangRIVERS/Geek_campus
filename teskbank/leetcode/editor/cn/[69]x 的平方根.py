@@ -29,7 +29,7 @@ class Solution:
         right = x
         while left <= right:
             mid = int((left + right) / 2)
-            result = mid**2
+            result = mid ** 2
             if result == x:
                 return mid
             elif result < x:

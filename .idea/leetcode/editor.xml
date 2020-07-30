@@ -43,6 +43,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[1143]最长公共子序列.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[1143]最长公共子序列.py" />
+              <option name="questionId" value="1250" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[11]盛最多水的容器.py">
           <value>
             <LeetcodeEditor>
@@ -91,6 +99,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[153]寻找旋转排序数组中的最小值.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[153]寻找旋转排序数组中的最小值.py" />
+              <option name="questionId" value="153" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[15]三数之和.py">
           <value>
             <LeetcodeEditor>
@@ -120,6 +136,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[18]四数之和.py" />
               <option name="questionId" value="18" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[198]打家劫舍.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[198]打家劫舍.py" />
+              <option name="questionId" value="198" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -240,6 +264,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[31]下一个排列.py" />
               <option name="questionId" value="31" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[322]零钱兑换.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[322]零钱兑换.py" />
+              <option name="questionId" value="322" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -408,6 +440,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[70]爬楼梯.py" />
               <option name="questionId" value="70" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[74]搜索二维矩阵.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[74]搜索二维矩阵.py" />
+              <option name="questionId" value="74" />
             </LeetcodeEditor>
           </value>
         </entry>

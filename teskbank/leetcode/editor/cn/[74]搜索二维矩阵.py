@@ -33,4 +33,27 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        if not matrix:
+            return False
+        size_row = len(matrix)
+        size_col = len(matrix[0])
+        size = size_row * size_col
+        left = 0
+        right = size - 1
+
+        def get_cor(idx):
+            row = idx // size_col
+            col = idx % size_col
+            return (row, col)
+
+        while left <= right:
+            mid = (left + right) // 2
+            cor_mid = get_cor(mid)
+            if matrix[cor_mid[0]][cor_mid[1]] == target:
+                return True
+            elif matrix[cor_mid[0]][cor_mid[1]] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return False
 # leetcode submit region end(Prohibit modification and deletion)

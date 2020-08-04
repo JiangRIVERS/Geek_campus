@@ -51,11 +51,4 @@ class Solution:
         for i in range(2, size):
             first, second = second, max(first + nums[i], second)
         return second
-
-
-
-
-
-
-
 # leetcode submit region end(Prohibit modification and deletion)

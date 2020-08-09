@@ -187,6 +187,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[208]实现 Trie (前缀树).py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[208]实现 Trie (前缀树).py" />
+              <option name="questionId" value="208" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[213]打家劫舍 II.py">
           <value>
             <LeetcodeEditor>
@@ -488,6 +496,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[74]搜索二维矩阵.py" />
               <option name="questionId" value="74" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[79]单词搜索.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[79]单词搜索.py" />
+              <option name="questionId" value="79" />
             </LeetcodeEditor>
           </value>
         </entry>

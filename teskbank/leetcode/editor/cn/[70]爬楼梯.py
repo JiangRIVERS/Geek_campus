@@ -27,10 +27,6 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def climbStairs(self, n: int) -> int:
-        """
-        时间复杂度O(n)
-        空间复杂度O(1)
-        """
         p = q = 0 # 记录 f(n-1) 和 f(n-2) 所需步骤
         r = 1 # 记录 f(n) 所需步骤
         for i in range(n):

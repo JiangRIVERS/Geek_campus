@@ -64,7 +64,7 @@ class Solution:
         temp, board[i][j] = board[i][j], '@'
         for k in range(4):
             x, y = i + dx[k], j + dy[k]
-            if 0 <= x < self.m and 0 <= y < self.n and board[x][y] != '@' and board[x][y] in cur_dict:
+            if 0 <= x < self.m and 0 <= y < self.n and board[x][y] in cur_dict:
                 self._dfs(board, cur_word, cur_dict, x, y)
         board[i][j] = temp
 

@@ -34,7 +34,9 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
+'''
 class Solution:
+    # 回溯
     def numIslands(self, grid: List[List[str]]) -> int:
         if not grid:
             return 0
@@ -58,7 +60,59 @@ class Solution:
                     helper(i, j)
 
         return self.num
+'''
+'''
+# 并查集
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+class UnionFind:
+    def __init__(self, grid):
+        m = len(grid)
+        n = len(grid[0])
+        self.count = 0
+        self.p = [-1] * (m * n)
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == '1':
+                    self.p[i * n + j] = i * n + j
+                    self.count += 1
 
+    def union(self, x, y):
+        p1 = self._parent(x)
+        p2 = self._parent(y)
+        if p1 != p2:
+            self.p[p2] = p1
+            self.count -= 1
 
+    def _parent(self, i):
+        root = i
+        while self.p[root] != root:
+            root = self.p[root]
+        while self.p[i] != i:
+            x = i
+            i = self.p[i]
+            self.p[x] = root
+        return root
 
+    def getCount(self):
+        return self.count
+
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        if not grid:
+            return 0
+        m = len(grid)
+        n = len(grid[0])
+        uf = UnionFind(grid)
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == '1':
+                    grid[i][j] = '0'
+                    for k in range(4):
+                        x = i + dx[k]
+                        y = j + dy[k]
+                        if 0 <= x < m and 0 <= y < n and grid[x][y] == '1':
+                            uf.union(i * n + j, x * n + y)
+        return uf.getCount()
+'''
 # leetcode submit region end(Prohibit modification and deletion)

@@ -34,7 +34,6 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
-'''
 class Solution:
     # 回溯
     def numIslands(self, grid: List[List[str]]) -> int:
@@ -48,19 +47,17 @@ class Solution:
             if i not in range(0, self.i) or j not in range(0, self.j) or grid[i][j] == '0':
                 return
             grid[i][j] = '0'
-            helper(i, j+1)
-            helper(i, j-1)
-            helper(i+1, j)
-            helper(i-1, j)
+            helper(i, j + 1)
+            helper(i, j - 1)
+            helper(i + 1, j)
+            helper(i - 1, j)
 
         for i in range(self.i):
             for j in range(self.j):
                 if grid[i][j] == '1':
                     self.num += 1
                     helper(i, j)
-
         return self.num
-'''
 '''
 # 并查集
 dx = [-1, 1, 0, 0]

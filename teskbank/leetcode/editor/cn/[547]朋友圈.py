@@ -38,6 +38,7 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
+'''
 class Solution:
     def findCircleNum(self, M: List[List[int]]) -> int:
         if not M:
@@ -64,4 +65,36 @@ class Solution:
             i = p[i]
             p[x] = root
         return root
+'''
+class UnionFind:
+    def __init__(self, M):
+        self.p = [i for i in range(len(M))]
+
+    def _union(self, i, j):
+        p1 = self._parent(i)
+        p2 = self._parent(j)
+        if p1 != p2:
+            self.p[p2] = p1
+
+    def _parent(self, i):
+        root = i
+        while root != self.p[root]:
+            root = self.p[root]
+        while i != self.p[i]:
+            x = i
+            i = self.p[i]
+            self.p[x] = root
+        return root
+
+class Solution:
+    def findCircleNum(self, M: List[List[int]]) -> int:
+        if not M:
+            return 0
+        n = len(M)
+        uf = UnionFind(M)
+        for i in range(n):
+            for j in range(n):
+                if M[i][j] == 1:
+                    uf._union(i, j)
+        return len(set([uf._parent(i) for i in range(n)]))
 # leetcode submit region end(Prohibit modification and deletion)

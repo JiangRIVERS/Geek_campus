@@ -34,6 +34,7 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
+'''
 class Solution:
     # 回溯
     def numIslands(self, grid: List[List[str]]) -> int:
@@ -58,7 +59,7 @@ class Solution:
                     self.num += 1
                     helper(i, j)
         return self.num
-'''
+
 # 并查集
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
@@ -112,4 +113,20 @@ class Solution:
                             uf.union(i * n + j, x * n + y)
         return uf.getCount()
 '''
+class UnionFind:
+    def __init__(self, M):
+        m, n = len(M), len(M[0])
+        self.p = [-1] * (m * n)
+
+    def _union(self, i, j):
+        p1 = self.p[i]
+        p2 = self.p[j]
+        if p1 != p2:
+            self.p[p2] = p1
+
+    def _parent(self, i):
+        root = i
+class Solution:
+    # 重做一遍并查集
+    def numIslands(self, grid: List[List[str]]) -> int:
 # leetcode submit region end(Prohibit modification and deletion)

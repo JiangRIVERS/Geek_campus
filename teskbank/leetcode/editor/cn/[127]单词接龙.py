@@ -63,7 +63,7 @@ class Solution:
                         return cur_level + 1
                     if j not in visited:
                         visited[j] = 1
-                        queue.append((j, cur_level+1))
+                        queue.append((j, cur_level + 1))
                 all_combo_dict[key] = []
         return 0
         

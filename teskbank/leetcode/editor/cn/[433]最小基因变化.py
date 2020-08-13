@@ -50,7 +50,8 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
-class Solution:
+'''
+class Solution: # dfs
     def minMutation(self, start: str, end: str, bank: List[str]) -> int:
         if end not in bank:
             return -1
@@ -78,5 +79,37 @@ class Solution:
                     helper(current_end, step+1, current_bank.copy())
         helper(start, 0, bank)
         return self.count if self.count <= size else -1
-        
+'''
+class Solution: # 双向bfs
+    def minMutation(self, start: str, end: str, bank: List[str]) -> int:
+        if not start or not end or not bank or end not in bank:
+            return -1
+        dict_ = {
+                 'A':'CGT',
+                 'C':'AGT',
+                 'G':'ACT',
+                 'T':'ACG'
+                }
+        n = len(start)
+        bank_set = set(bank)
+        start_queue = {start}
+        end_queue = {end}
+        step = 0
+        while start_queue:
+            step += 1
+            next_queue = set()
+            for i in start_queue:
+                for j in range(n):
+                    for char in dict_[i[j]]:
+                        word = i[:j] + char + i[j + 1:]
+                        if word in end_queue:
+                            return step
+                        if word in bank_set:
+                            next_queue.add(word)
+                            bank_set.remove(word)
+            start_queue = next_queue
+            if len(start_queue) > len(end_queue):
+                start_queue, end_queue = end_queue, start_queue
+        return -1
+
 # leetcode submit region end(Prohibit modification and deletion)

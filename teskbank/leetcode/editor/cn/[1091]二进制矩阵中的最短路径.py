@@ -41,6 +41,7 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
+'''
 dx = [-1, -1, -1, 0, 0, 1, 1, 1]
 dy = [-1, 0, 1, -1, 1, -1, 0, 1]
 class Solution:
@@ -69,6 +70,37 @@ class Solution:
                         visited.add((x, y))
             queue = next_queue
         return -1
+'''
+dx = [-1, -1, -1, 0, 0, 1, 1, 1]
+dy = [-1, 0, 1, -1, 1, -1, 0, 1]
+class Solution:
+    def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
+        # 双端BFS
+        if grid[0][0] or grid[-1][-1]:
+            return -1
+        if len(grid) == 1:
+            return 1
 
+        n = len(grid)
+        begin = {(0, 0)}
+        end = {(n - 1, n - 1)}
+        visited = {(0, 0), (n - 1, n - 1)}
+        step = 1
+        while begin:
+            step += 1
+            next_queue = set()
+            for cor in begin:
+                i, j = cor
+                for _ in range(8):
+                    x, y = i + dx[_], j + dy[_]
+                    if (x, y) in end:
+                        return step
+                    if 0 <= x < n and 0 <= y < n and grid[x][y] != 1 and (x, y) not in visited:
+                        next_queue.add((x, y))
+                        visited.add((x, y))
+            begin = next_queue
+            if len(begin) > len(end):
+                begin, end = end, begin
+        return -1
 
 # leetcode submit region end(Prohibit modification and deletion)

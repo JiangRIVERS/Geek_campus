@@ -51,6 +51,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[110]平衡二叉树.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[110]平衡二叉树.py" />
+              <option name="questionId" value="110" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[1143]最长公共子序列.py">
           <value>
             <LeetcodeEditor>
@@ -384,6 +392,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[37]解数独.py" />
               <option name="questionId" value="37" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[387]字符串中的第一个唯一字符.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/teskbank/leetcode/editor/cn/[387]字符串中的第一个唯一字符.py" />
+              <option name="questionId" value="387" />
             </LeetcodeEditor>
           </value>
         </entry>

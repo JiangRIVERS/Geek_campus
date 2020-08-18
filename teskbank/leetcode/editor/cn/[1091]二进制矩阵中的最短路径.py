@@ -75,7 +75,7 @@ dx = [-1, -1, -1, 0, 0, 1, 1, 1]
 dy = [-1, 0, 1, -1, 1, -1, 0, 1]
 class Solution:
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
-        # 双端BFS
+        # 双向BFS
         if grid[0][0] or grid[-1][-1]:
             return -1
         if len(grid) == 1:
